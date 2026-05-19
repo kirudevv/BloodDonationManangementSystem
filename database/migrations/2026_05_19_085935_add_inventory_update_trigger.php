@@ -8,10 +8,10 @@ return new class extends Migration
     public function up(): void
     {
         // Drop if exists to avoid migration crash loops
-        DB::unprepared('DROP TRIGGER IF EXISTS after_donation_update');
+        DB::unprepared('DROP TRIGGER IF EXISTS after_donation_completed');
 
         DB::unprepared("
-            CREATE TRIGGER after_donation_update
+            CREATE TRIGGER after_donation_completed
             AFTER UPDATE ON donations
             FOR EACH ROW
             BEGIN
