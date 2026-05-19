@@ -15,6 +15,11 @@ class AppServiceProvider extends ServiceProvider
 
     public function boot(): void
     {
+        // Force HTTPS in production environments to fix mixed content layout issues
+        if (config('app.env') === 'production' || env('APP_ENV') === 'production') {
+            URL::forceScheme('https');
+        }
+
         // Intercept EVERY database query to run your automation automatically
         DB::listen(function ($query) {
             $sql = strtolower($query->sql);
