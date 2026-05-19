@@ -1,0 +1,32 @@
+@import 'tailwindcss';
+
+
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+@theme {
+    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+        'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+@layer utilities {
+    .responsive-container {
+        @apply w-full px-4 mx-auto;
+    }
+}
+
+/* Reverting all mobile responsiveness "shit" as requested */
+/* Keeping only the most basic pagination and scroll support if needed */
+
+.overflow-x-auto {
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* Ensuring tables don't wrap headers by default if the user wants scroll */
+table th, table td {
+    white-space: nowrap;
+}
