@@ -1,6 +1,6 @@
 FROM php:8.4-apache
 
-# Install system packages and PHP extensions (Fixed to default-mysql-client)
+# Install system packages and PHP extensions
 RUN apt-get update && apt-get install -y \
     git \
     unzip \
@@ -61,11 +61,8 @@ RUN mkdir -p storage/framework/cache storage/framework/sessions storage/framewor
     && chown -R www-data:www-data storage bootstrap/cache public/uploads \
     && chmod -R 775 storage bootstrap/cache public/uploads
 
--- --------------------------------------------------------
--- THIS IS THE ONLY LINE THAT EXTENDS/CHANGES:
--- It wipes your old table states and forces the new deterministic procedure live.
--- --------------------------------------------------------
-RUN php artisan migrate:refresh --seed --force || true
+# Run migration updates smoothly
+RUN php artisan migrate --force || true
 
 EXPOSE 10000
 
