@@ -15,4 +15,7 @@ export default defineConfig({
             ignored: ['**/storage/framework/views/**'],
         },
     },
+    build: {
+        outDir: 'public/build', // Forces the assets directly into the public folder inside your Docker container
+    },
 });
