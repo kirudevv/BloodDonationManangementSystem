@@ -12,6 +12,7 @@ class Donation extends Model
 {
     use SoftDeletes;
 
+    
     protected static function booted(): void{
     static::updated(function ($donation) {
         // Only trigger if the status was changed specifically to 'Approved'
@@ -47,6 +48,8 @@ class Donation extends Model
     public function hospital():BelongsTo{
         return $this->belongsTo(Hospital::class, 'hospital_id');
     }
+
+    public $timestamps = true;
     
 
 }

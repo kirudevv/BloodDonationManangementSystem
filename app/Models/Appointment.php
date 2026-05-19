@@ -9,7 +9,11 @@ class Appointment extends Model
 {
     use SoftDeletes;
 
+    protected $table = 'appointments';
     protected $primaryKey = 'appointment_id';
+
+    public $timestamps = true;
+    
     protected $fillable = ['user_id', 'hospital_id', 'donation_id', 'request_id', 'status'];
     public function user()
     {
