@@ -26,7 +26,7 @@
                         <button type="submit" class="px-3 py-1 bg-[#DE6262] text-[#FEFFEA] rounded hover:bg-[#A93232] transition duration-300 text-sm">Delete</button>
                     </form>
                 </td>
-
+            @endforeach
             </tr>
         </tbody>
     </table>
