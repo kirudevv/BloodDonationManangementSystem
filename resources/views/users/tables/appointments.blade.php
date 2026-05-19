@@ -53,6 +53,7 @@
                     No appointments found.
                 </td>
             </tr>
+            @endforelse
         </tbody>
     </table>    
     <div class="mt-4 px-4">
