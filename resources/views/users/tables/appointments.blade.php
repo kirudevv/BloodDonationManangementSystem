@@ -56,5 +56,5 @@
         </tbody>
     </table>    
     <div class="mt-4 px-4">
-        {{ $appointments->appends(request()->query())->links() }}
+        {{ $appointments->appends(request()->query())->links(); }}
     </div>

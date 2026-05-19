@@ -180,5 +180,5 @@
         </tbody>
     </table>
     <div class="mt-4 px-4">
-        {{ $inventory->appends(request()->query())->links() }}
+        {{ $inventory->appends(request()->query())->links(); }}
     </div>

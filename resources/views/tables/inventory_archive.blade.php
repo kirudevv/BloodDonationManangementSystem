@@ -84,7 +84,7 @@
                 </tbody>
             </table>
             <div class="mt-4 px-4">
-                {{ $archived->appends(request()->query())->links() }}
+                {{ $archived->appends(request()->query())->links(); }}
             </div>
     </div>
 @endsection

@@ -63,5 +63,5 @@
     </tbody>
 </table>
 <div class="mt-4 px-4">
-    {{ $donations->appends(request()->query())->links() }}
+    {{ $donations->appends(request()->query())->links(); }}
 </div>

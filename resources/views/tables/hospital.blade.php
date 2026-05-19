@@ -18,5 +18,5 @@
         </tbody>
     </table>
     <div class="mt-4 px-4">
-        {{ $hospitals->appends(request()->query())->links() }}
+        {{ $hospitals->appends(request()->query())->links(); }}
     </div>

@@ -44,5 +44,5 @@
         </tbody>
     </table>
     <div class="mt-4 px-4">
-        {{ $bloodrequests->appends(request()->query())->links() }}
+        {{ $bloodrequests->appends(request()->query())->links(); }}
     </div>
