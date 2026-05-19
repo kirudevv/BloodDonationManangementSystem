@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
         
         <div class="text-center max-w-3xl mx-auto mb-16">
             <h2 class="text-base text-red-600 font-semibold tracking-wide uppercase">Our Mission</h2>
