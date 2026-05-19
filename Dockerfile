@@ -1,11 +1,11 @@
 FROM php:8.4-apache
 
-# Install system packages and PHP extensions (Added mysql-client)
+# Install system packages and PHP extensions (Fixed to default-mysql-client)
 RUN apt-get update && apt-get install -y \
     git \
     unzip \
     curl \
-    mysql-client \
+    default-mysql-client \
     libpq-dev \
     libzip-dev \
     libonig-dev \
@@ -61,7 +61,7 @@ RUN mkdir -p storage/framework/cache storage/framework/sessions storage/framewor
     && chown -R www-data:www-data storage bootstrap/cache public/uploads \
     && chmod -R 775 storage bootstrap/cache public/uploads
 
-# CRITICAL FIX: Run the migrations to actually inject your triggers into Clever Cloud
+# FORCE DATABASE MIGRATIONS TO RUN ON DEPLOYMENT
 RUN php artisan migrate --force || true
 
 EXPOSE 10000
