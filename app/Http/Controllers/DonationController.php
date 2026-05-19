@@ -216,4 +216,18 @@ class DonationController extends Controller
     public function user(){
         return $this->belongsTo(User::class, 'user_id')->withTrashed();
     }
+
+    public function approveDonation($id) 
+    {
+        // Find the record using the Eloquent Model
+        $donation = Donation::find($id);
+        
+        // Change the status property
+        $donation->status = 'Approved';
+        
+        // This exact save() method is what screams to the DonationObserver to fire!
+        $donation->save(); 
+
+        return redirect()->back()->with('success', 'Donation approved and appointment scheduled!');
+    }
 }

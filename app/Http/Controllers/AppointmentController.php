@@ -94,4 +94,18 @@ class AppointmentController extends Controller
         return redirect()->route('dashboard')
             ->with('success', 'Appointment has been archived.');
     }
+
+    public function completeAppointment($id) 
+    {
+        // Find the record using the Eloquent Model
+        $appointment = Appointment::find($id);
+        
+        // Change the status property
+        $appointment->status = 'Completed';
+        
+        // This exact save() method is what screams to the AppointmentObserver to fire!
+        $appointment->save(); 
+
+        return redirect()->back()->with('success', 'Appointment marked as completed and inventory updated!');
+    }
 }
