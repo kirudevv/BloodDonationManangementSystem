@@ -1,4 +1,4 @@
-<div class="bg-[#FEFFEA] w-120 flex flex-col px-6 py-6 items-start justify-start rounded-xl shadow-sm mb-3 mt-6">
+<div class="bg-[#FEFFEA] w-100 flex flex-col px-6 py-6 items-start justify-start rounded-xl shadow-sm mb-3 md:w-120">
     <form action="{{ route('appointments.update', $appointment->appointment_id) }}" method="POST" class="w-full">
         @csrf
         @method('PUT')

@@ -1,4 +1,4 @@
-<div class="bg-[#FEFFEA] w-120 flex flex-col py-6 px-6 items-start justify-start rounded-xl shadow-md mb-3">
+<div class="bg-[#FEFFEA] w-100 flex flex-col px-6 py-6 items-start justify-start rounded-xl shadow-sm mb-3 md:w-120">
     <div class="w-full mb-4">
         <label for="blood_type" class="text-[#3A384C] font-semibold mb-1 text-sm block">Blood Type</label>
         <select name="blood_type" id="blood_type" required class="w-full px-4 py-2 rounded-lg border-2 border-slate-200 bg-[#E6E6E6] focus:border-[#3A384C] focus:outline-none transition duration-300">

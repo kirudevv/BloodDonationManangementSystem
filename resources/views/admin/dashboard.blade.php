@@ -65,7 +65,7 @@
 
                 <div class="flex py-3 items-end justify-between">
                     <a href="{{ route('hospital.create') }}"
-                        class="w-50 mt-4 px-2 py-1 bg-[#FEFFEA] text-xl text-[#A93232] font-semibold rounded-xl hover:bg-[#E6E6E6] transition duration-300">add
+                        class="w-33 mt-4 px-2 py-1 bg-[#FEFFEA] text-xl text-[#A93232] font-semibold rounded-xl hover:bg-[#E6E6E6] transition duration-300">add
                         hospital</a>
                 </div>
 

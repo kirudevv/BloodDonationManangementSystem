@@ -1,6 +1,6 @@
     @extends('layouts.app') 
     @section('content')
-        <div class="bg-[#A93232] px-20 py-3 rounded-lg mb-3">
+        <div class="bg-[#A93232] px-10 py-3 rounded-lg mb-2 md:px-20 md:md-3">
             <label for="actionType" class="text-[#FEFFEA] items-start justify-start font-semibold">Choose an action</label>
             <select id="actionType" name="actionType" onchange="toggle()" class="bg-[#FEFFEA] rounded-lg border-2 focus:border-[#3A384C] border-slate-200 focus:outline-none transition duration-300">
                 <option value="" disabled selected>Click here to choose</option>

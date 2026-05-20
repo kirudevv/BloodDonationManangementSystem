@@ -1,4 +1,4 @@
-<div class="bg-[#FEFFEA] w-120 flex flex-col px-6 py-6 items-start justify-start rounded-xl shadow-md mb-3">
+<div class="bg-[#FEFFEA] w-100 flex flex-col px-6 py-6 items-start justify-start rounded-xl shadow-sm mb-3 md:w-120">
     <div class="w-full mb4">
 
     </div>
